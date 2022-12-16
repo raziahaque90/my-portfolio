@@ -1,0 +1,278 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	margin: 0;
+	padding: 0;
+	background-color: black;
+	color: white;
+}
+.brd{
+	border: 1px solid white;
+}
+/*img{
+	height: 100% !important;
+}*/
+.cont{
+	padding: 80px 20px;
+}
+.title-name{
+	font-size: 2.5vw;
+	font-weight: bold;
+	color: orange;
+	font-style:italic;
+}
+
+/*.................header css......................*/
+.header{
+	background-image: url('../images/myphoto.jpg');
+	height: 100vh;
+	/*background-repeat: no-repeat;*/
+	background-size: cover;
+	/*background-color: white;*/
+	/*border: 1px solid white;*/
+}
+
+/*h1{
+     color: orange; 
+  font-family: "arial";
+  font-size: 3em;
+  margin: 10px 0 0 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  animation: animtext 4s steps(80, end); 
+   transition: all cubic-bezier(0.1, 0.7, 1.0, 0.1);
+}*/
+@keyframes animtext { 
+  from {
+      width: 0;
+     transition: all 2s ease-in-out;
+  } 
+}
+.header-text{
+	width: 400px;
+	/*height: 100vh;*/
+	/*background-color: white;*/
+
+}
+.head-mid{
+	height: 50vh;
+	/*background-color: white;*/
+}
+.header button{
+	margin: 0 5px 0 0;
+}
+h1::first-letter{
+	color: orange;
+
+}
+
+/*...................navigation bar css...............*/
+
+.navbar .navbar-nav .nav-link {
+  color: white;
+  font-variant: small-caps;
+  /*font-size: 1.1em;*/
+}
+.navbar .navbar-nav .nav-link:hover {
+  color: orange;
+}
+.navbar .navbar-nav .nav-item {
+  position: relative;
+}
+.navbar .navbar-nav .nav-item::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: orange;
+  width: 0%;
+  content: "";
+  height: 4px;
+  transition: all 0.5s;
+}
+
+.navbar .navbar-nav .nav-item:hover::after {
+  width: 100%;
+}
+.navbar .navbar-brand img, #about img, #team img{
+	height: 100% !important;
+}
+
+/*........................about css.....................*/
+
+.skill-btn, .training-btn{
+	margin: 20px 7px;
+}
+.progress{
+	height: 10px;
+	/*margin-top: 5px;*/
+}
+#about{
+	height: 100vh;
+}
+#skill p{
+	font-size: 12px;
+
+}
+
+
+
+
+
+
+/*.................myTeam css.....................*/
+
+.cont-img{
+			width: 20%;
+			height: 300px;
+			margin-bottom:0 10px 20px 10px;
+		}
+
+.img-col{
+	width: 25%;
+	height: 300px;
+	margin:20px 20px;
+	position: relative;
+}
+.team-mem-info{
+	width: 100%;
+	height: 0;
+	background: linear-gradient(rgba(0,0,0,0.7),orange);
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	overflow: hidden;
+	transition: height 0.4s;
+}
+
+.img-col:hover .team-mem-info{
+	height: 100%;
+}
+
+/*............................services css................................*/
+.service-img{
+	width: 25%;
+	height: 300px;
+	margin:20px 20px;
+	position: relative;
+	background-color: gray;
+	transition: background 0.5s,transform 0.5s;
+	color: white;
+	font-size: 25px;
+}
+
+.service-img:hover{
+	/*background-color: orange;*/
+	background: linear-gradient(orange,orange);
+	transform: translateY(-10px);
+}
+
+
+/*.....................contact css.................................*/
+.media-icon{
+	margin-top: 20px;
+}
+
+.media-icon i{
+	color: orange;
+	font-size: 20px;
+}
+.media-icon span{
+	color: white;
+	font-size: 15px;
+}
+
+
+/*...............................footer css....................*/
+.ftr{
+	height: 60px;
+}
+/*.footer-icon{
+	height: 40px;
+	width: 40px;
+	background-color: orange;
+	border-radius: 50%;
+}
+*/
+.footer-icon i{
+	font-size: 25px;
+	color: orange;
+
+}
+
+
+/*......................CV css....................................*/
+.main-container{
+	width: 90%;
+	color: black;
+}
+.cv-header{
+	/*width: 80%;*/
+	height: 250px;
+}
+.objective{
+	margin: 50px 0 0 0;
+}
+.footer-top{
+	height: 100px;
+}
+
+
+
+
+/*........................media query....................................*/
+@media only screen and (max-width: 770px){
+	
+	.img-col{
+	width: 25%;
+	height: 200px;
+	margin:10px 10px;
+}
+.service-img{
+	width: 25%;
+	height: 200px;
+	margin:10px 10px;
+	
+}
+.media-icon span{
+	
+	font-size: 10px;
+}
+.head-mid{
+	height: 30vh;
+	/*background-color: white;*/
+}
+}
+@media only screen and (max-width: 450px){
+
+	.media-icon span{
+	
+	font-size: 7px;
+}
+	
+	.img-col{
+	width: 25%;
+	height: 150px;
+	margin:4px 4px;
+}
+.service-img{
+	width: 25%;
+	height: 150px;
+	margin:4px 4px;
+	
+}
+.header{
+	height: 50vh;
+}
+.head-mid{
+	height: 10vh;
+	/*background-color: white;*/
+}
+#about{
+	height: auto;
+}
+
+}
